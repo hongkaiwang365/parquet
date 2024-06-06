@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php" : ">=7.2 <=8.0.99",
+        "php": "^8.1",
         "ext-gmp" : "*",
         "ext-bcmath" : "*",
         "ext-zlib": "*",
