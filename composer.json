@@ -1,11 +1,11 @@
 {
-    "name": "hongkai/parquet",
+    "name": "hongkaiwang365/parquet",
     "description": "parquet file For php7.2",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "hongkai",
+            "name": "hongkaiwang365",
             "email": "529988248@qq.com"
         }
     ],
@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "hongkai\\parquet\\": "src/"
+            "hongkaiwang365\\parquet\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "hongkai\\parquet\\tests\\": "tests/"
+            "hongkaiwang365\\parquet\\tests\\": "tests/"
         }
     },
     "require-dev": {
