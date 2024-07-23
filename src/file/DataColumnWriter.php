@@ -1,18 +1,18 @@
 <?php
-namespace hongkai\parquet\file;
+namespace hongkaiwang365\parquet\file;
 
-use hongkai\parquet\StreamHelper;
+use hongkaiwang365\parquet\StreamHelper;
 
-use hongkai\parquet\data\DataColumn;
-use hongkai\parquet\data\DataTypeHandlerInterface;
+use hongkaiwang365\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\DataTypeHandlerInterface;
 
-use hongkai\parquet\format\PageHeader;
-use hongkai\parquet\format\Statistics;
-use hongkai\parquet\format\ColumnChunk;
-use hongkai\parquet\format\SchemaElement;
-use hongkai\parquet\format\DataPageHeader;
+use hongkaiwang365\parquet\format\PageHeader;
+use hongkaiwang365\parquet\format\Statistics;
+use hongkaiwang365\parquet\format\ColumnChunk;
+use hongkaiwang365\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\DataPageHeader;
 
-use hongkai\parquet\values\RunLengthBitPackingHybridValuesWriter;
+use hongkaiwang365\parquet\values\RunLengthBitPackingHybridValuesWriter;
 
 /**
  * [PageTag description]
@@ -183,8 +183,8 @@ class DataColumnWriter
     // using (var writer = new BinaryWriter(pageStream, Encoding.UTF8, true))
     // {
     // $writer = new BinaryWriter
-    $writer = \hongkai\parquet\adapter\BinaryWriter::createInstance($pageStream);
-    // $writer->setOrder(\hongkai\parquet\adapter\BinaryWriter::LITTLE_ENDIAN); // enforce little endian
+    $writer = \hongkaiwang365\parquet\adapter\BinaryWriter::createInstance($pageStream);
+    // $writer->setOrder(\hongkaiwang365\parquet\adapter\BinaryWriter::LITTLE_ENDIAN); // enforce little endian
 
     // if (column.RepetitionLevels != null)
     // {
@@ -326,12 +326,12 @@ class DataColumnWriter
 
   /**
    * [WriteLevels description]
-   * @param \hongkai\parquet\adapter\BinaryWriter $writer   [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter $writer   [description]
    * @param int[]                      $levels   [description]
    * @param int                        $count    [description]
    * @param int                        $maxLevel [description]
    */
-  protected function WriteLevels(\hongkai\parquet\adapter\BinaryWriter $writer, array $levels, int $count, int $maxLevel): void
+  protected function WriteLevels(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, array $levels, int $count, int $maxLevel): void
   {
     // echo("WRITE LEVELS");
     $bitWidth = static::GetBitWidth($maxLevel);

@@ -1,8 +1,8 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\DataColumn;
 
 /**
  * [ParquetExtensions description]

@@ -8,11 +8,11 @@ require_once('vendor/autoload.php');
 //
 // The writing example:
 //
-use hongkai\parquet\ParquetWriter;
+use hongkaiwang365\parquet\ParquetWriter;
 
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\DataField;
-use hongkai\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\DataField;
+use hongkaiwang365\parquet\data\DataColumn;
 
 //create data columns with schema metadata and the data you need
 $idColumn = new DataColumn(
@@ -51,7 +51,7 @@ $parquetWriter->finish(); // finish the parquet writer last
 // The reading example:
 //
 
-use hongkai\parquet\ParquetReader;
+use hongkaiwang365\parquet\ParquetReader;
 
 // open file stream (in this example for reading only)
 $fileStream = fopen(__DIR__.'/test.parquet', 'r');

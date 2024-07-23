@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\helper;
+namespace hongkaiwang365\parquet\helper;
 
-use hongkai\parquet\data\Schema;
+use hongkaiwang365\parquet\data\Schema;
 
-use hongkai\parquet\format\ColumnChunk;
+use hongkaiwang365\parquet\format\ColumnChunk;
 
 class ThriftExtensions
 {

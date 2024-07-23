@@ -1,11 +1,11 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\CompressionMethod;
+use hongkaiwang365\parquet\CompressionMethod;
 
-use hongkai\parquet\format\CompressionCodec;
+use hongkaiwang365\parquet\format\CompressionCodec;
 
 /**
  * [DataFactory description]

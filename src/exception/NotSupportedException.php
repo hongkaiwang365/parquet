@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet\exception;
+namespace hongkaiwang365\parquet\exception;
 
 /**
  * [NotSupportedException description]

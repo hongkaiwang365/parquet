@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet\values\primitives;
+namespace hongkaiwang365\parquet\values\primitives;
 
 use DateTimeImmutable;
 
@@ -61,9 +61,9 @@ class NanoTime
 
   /**
    * [Write description]
-   * @param \hongkai\parquet\adapter\BinaryWriter $writer [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter $writer [description]
    */
-  public function Write(\hongkai\parquet\adapter\BinaryWriter $writer):void {
+  public function Write(\hongkaiwang365\parquet\adapter\BinaryWriter $writer):void {
     $writer->writeInt64($this->timeOfDayNanos);
     $writer->writeInt32($this->julianDay);
   }

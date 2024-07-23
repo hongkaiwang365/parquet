@@ -1,25 +1,25 @@
 <?php
-namespace hongkai\parquet\file;
+namespace hongkaiwang365\parquet\file;
 
-use hongkai\parquet\ParquetOptions;
+use hongkaiwang365\parquet\ParquetOptions;
 
-use hongkai\parquet\data\Field;
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\DataField;
-use hongkai\parquet\data\DataFactory;
-use hongkai\parquet\data\DataTypeFactory;
+use hongkaiwang365\parquet\data\Field;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\DataField;
+use hongkaiwang365\parquet\data\DataFactory;
+use hongkaiwang365\parquet\data\DataTypeFactory;
 
-use hongkai\parquet\format\Encoding;
-use hongkai\parquet\format\PageType;
-use hongkai\parquet\format\RowGroup;
-use hongkai\parquet\format\PageHeader;
-use hongkai\parquet\format\Statistics;
-use hongkai\parquet\format\ColumnChunk;
-use hongkai\parquet\format\FileMetaData;
-use hongkai\parquet\format\SchemaElement;
-use hongkai\parquet\format\ColumnMetaData;
-use hongkai\parquet\format\DataPageHeader;
-use hongkai\parquet\format\FieldRepetitionType;
+use hongkaiwang365\parquet\format\Encoding;
+use hongkaiwang365\parquet\format\PageType;
+use hongkaiwang365\parquet\format\RowGroup;
+use hongkaiwang365\parquet\format\PageHeader;
+use hongkaiwang365\parquet\format\Statistics;
+use hongkaiwang365\parquet\format\ColumnChunk;
+use hongkaiwang365\parquet\format\FileMetaData;
+use hongkaiwang365\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\ColumnMetaData;
+use hongkaiwang365\parquet\format\DataPageHeader;
+use hongkaiwang365\parquet\format\FieldRepetitionType;
 
 class ThriftFooter {
 

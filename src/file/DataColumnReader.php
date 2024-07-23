@@ -1,24 +1,24 @@
 <?php
-namespace hongkai\parquet\file;
+namespace hongkaiwang365\parquet\file;
 
-use hongkai\parquet\ParquetOptions;
+use hongkaiwang365\parquet\ParquetOptions;
 
-use hongkai\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryReader;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\DataField;
-use hongkai\parquet\data\DataColumn;
-use hongkai\parquet\data\DataTypeFactory;
-use hongkai\parquet\data\DataColumnStatistics;
-use hongkai\parquet\data\DataTypeHandlerInterface;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\DataField;
+use hongkaiwang365\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\DataTypeFactory;
+use hongkaiwang365\parquet\data\DataColumnStatistics;
+use hongkaiwang365\parquet\data\DataTypeHandlerInterface;
 
-use hongkai\parquet\format\Encoding;
-use hongkai\parquet\format\PageType;
-use hongkai\parquet\format\PageHeader;
-use hongkai\parquet\format\ColumnChunk;
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\Encoding;
+use hongkaiwang365\parquet\format\PageType;
+use hongkaiwang365\parquet\format\PageHeader;
+use hongkaiwang365\parquet\format\ColumnChunk;
+use hongkaiwang365\parquet\format\SchemaElement;
 
-use hongkai\parquet\values\RunLengthBitPackingHybridValuesReader;
+use hongkaiwang365\parquet\values\RunLengthBitPackingHybridValuesReader;
 
 class DataColumnReader
 {
@@ -148,7 +148,7 @@ class DataColumnReader
 
     $bytes = $this->readPageDataByPageHeader($ph);
 
-    $reader = \hongkai\parquet\adapter\BinaryReader::createInstance($bytes);
+    $reader = \hongkaiwang365\parquet\adapter\BinaryReader::createInstance($bytes);
 
     if($this->maxRepetitionLevel > 0) {
       //todo: use rented buffers, but be aware that rented length can be more than requested so underlying logic relying on array length must be fixed too.
@@ -521,7 +521,7 @@ class DataColumnReader
 
         // using (var dataReader = new BinaryReader(ms))
         // {
-    $dataReader = \hongkai\parquet\adapter\BinaryReader::createInstance($bytes); // new \hongkai\parquet\adapter\PhpBinaryReader($ms);
+    $dataReader = \hongkaiwang365\parquet\adapter\BinaryReader::createInstance($bytes); // new \hongkaiwang365\parquet\adapter\PhpBinaryReader($ms);
 
 
         // dictionary = _dataTypeHandler.GetArray(ph.Dictionary_page_header.Num_values, false, false);

@@ -1,22 +1,22 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
 use DateTimeImmutable;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\DateTimeFormat;
-use hongkai\parquet\data\DateTimeDataField;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\DateTimeFormat;
+use hongkaiwang365\parquet\data\DateTimeDataField;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
-use hongkai\parquet\helper\OtherExtensions;
+use hongkaiwang365\parquet\helper\OtherExtensions;
 
-use hongkai\parquet\values\primitives\NanoTime;
+use hongkaiwang365\parquet\values\primitives\NanoTime;
 
 /**
  * [DateTimeOffsetDataTypeHandler description]
@@ -36,8 +36,8 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
     return
       ($tse->type === Type::INT96 && $formatOptions->TreatBigIntegersAsDates) || // Impala
@@ -49,8 +49,8 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function createThrift(
-    \hongkai\parquet\data\Field $field,
-    \hongkai\parquet\format\SchemaElement $parent,
+    \hongkaiwang365\parquet\data\Field $field,
+    \hongkaiwang365\parquet\format\SchemaElement $parent,
     array &$container
   ): void {
     parent::createThrift($field, $parent, $container);
@@ -84,7 +84,7 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   public function read(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -104,10 +104,10 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function Write(
-    \hongkai\parquet\format\SchemaElement $tse,
-    \hongkai\parquet\adapter\BinaryWriter $writer,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryWriter $writer,
     array $values,
-    \hongkai\parquet\data\DataColumnStatistics $statistics = null
+    \hongkaiwang365\parquet\data\DataColumnStatistics $statistics = null
   ): void {
 
     switch($tse->type) {
@@ -152,10 +152,10 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
 
   /**
    * [WriteAsInt32 description]
-   * @param \hongkai\parquet\adapter\BinaryWriter  $writer [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter  $writer [description]
    * @param DateTimeImmutable[]   $values [description]
    */
-  protected function WriteAsInt32(\hongkai\parquet\adapter\BinaryWriter $writer, array $values): void
+  protected function WriteAsInt32(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, array $values): void
   {
     foreach($values as $dto) {
       $days = OtherExtensions::ToUnixDays($dto);
@@ -184,10 +184,10 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
 
   /**
    * [WriteAsInt64 description]
-   * @param \hongkai\parquet\adapter\BinaryWriter  $writer [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter  $writer [description]
    * @param DateTimeImmutable[]   $values [description]
    */
-  protected function WriteAsInt64(\hongkai\parquet\adapter\BinaryWriter $writer, array $values): void
+  protected function WriteAsInt64(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, array $values): void
   {
     foreach($values as $dto) {
       $value = OtherExtensions::ToUnixMilliseconds($dto);
@@ -216,10 +216,10 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
 
   /**
    * [WriteAsInt96 description]
-   * @param \hongkai\parquet\adapter\BinaryWriter  $writer [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter  $writer [description]
    * @param DateTimeImmutable[]   $values [description]
    */
-  protected function WriteAsInt96(\hongkai\parquet\adapter\BinaryWriter $writer, array $values): void
+  protected function WriteAsInt96(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, array $values): void
   {
     foreach($values as $dto) {
       $nano = NanoTime::NanoTimeFromDateTimeImmutable($dto);
@@ -232,7 +232,7 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   protected function readSingle(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     switch($tse->type) {
@@ -253,7 +253,7 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
   /**
   * @inheritDoc
   */
-  public function plainEncode(\hongkai\parquet\format\SchemaElement $tse, $x)
+  public function plainEncode(\hongkaiwang365\parquet\format\SchemaElement $tse, $x)
   {
     if($x === null) return null;
 
@@ -267,7 +267,7 @@ class DateTimeOffsetDataTypeHandler extends BasicPrimitiveDataTypeHandler
   * @inheritDoc
   */
   public function plainDecode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $encoded
   ) {
     if ($encoded === null) return null;

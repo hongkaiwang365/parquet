@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\file;
+namespace hongkaiwang365\parquet\file;
 
 use Thrift\Protocol\TCompactProtocol;
 
-use hongkai\parquet\transport\TStreamTransport;
+use hongkaiwang365\parquet\transport\TStreamTransport;
 
 class ThriftStream {
 

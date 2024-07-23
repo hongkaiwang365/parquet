@@ -1,12 +1,12 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
-use hongkai\parquet\ParquetOptions;
+use hongkaiwang365\parquet\ParquetOptions;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\SchemaElement;
 
 interface DataTypeHandlerInterface
 {

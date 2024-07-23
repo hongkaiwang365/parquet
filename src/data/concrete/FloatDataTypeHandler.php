@@ -1,11 +1,11 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 class FloatDataTypeHandler extends BasicPrimitiveDataTypeHandler
 {
@@ -21,8 +21,8 @@ class FloatDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   protected function readSingle(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) : float {
     //
@@ -37,7 +37,7 @@ class FloatDataTypeHandler extends BasicPrimitiveDataTypeHandler
   /**
    * @inheritDoc
    */
-  protected function WriteOne(\hongkai\parquet\adapter\BinaryWriter $writer, $value): void
+  protected function WriteOne(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, $value): void
   {
     $writer->writeSingle($value);
   }

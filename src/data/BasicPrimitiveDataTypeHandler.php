@@ -1,8 +1,8 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
 abstract class BasicPrimitiveDataTypeHandler extends BasicDataTypeHandler
 {
@@ -115,7 +115,7 @@ abstract class BasicPrimitiveDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   public function plainEncode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $x
   ) {
     if($x === null) return null;
@@ -130,7 +130,7 @@ abstract class BasicPrimitiveDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   public function plainDecode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $encoded
   ) {
     if ($encoded === null) return null;

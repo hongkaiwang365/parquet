@@ -1,25 +1,25 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
-use hongkai\parquet\ParquetOptions;
+use hongkaiwang365\parquet\ParquetOptions;
 ;
-use hongkai\parquet\data\concrete\MapDataTypeHandler;
-use hongkai\parquet\data\concrete\ByteDataTypeHandler;
-use hongkai\parquet\data\concrete\ListDataTypeHandler;
-use hongkai\parquet\data\concrete\FloatDataTypeHandler;
-use hongkai\parquet\data\concrete\DoubleDataTypeHandler;
-use hongkai\parquet\data\concrete\Int32DataTypeHandler;
-use hongkai\parquet\data\concrete\Int64DataTypeHandler;
-use hongkai\parquet\data\concrete\StringDataTypeHandler;
-use hongkai\parquet\data\concrete\BooleanDataTypeHandler;
-use hongkai\parquet\data\concrete\DecimalDataTypeHandler;
-use hongkai\parquet\data\concrete\ByteArrayDataTypeHandler;
-use hongkai\parquet\data\concrete\StructureDataTypeHandler;
-use hongkai\parquet\data\concrete\DateTimeOffsetDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\MapDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\ByteDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\ListDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\FloatDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\DoubleDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\Int32DataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\Int64DataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\StringDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\BooleanDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\DecimalDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\ByteArrayDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\StructureDataTypeHandler;
+use hongkaiwang365\parquet\data\concrete\DateTimeOffsetDataTypeHandler;
 
-use hongkai\parquet\exception\NotSupportedException;
+use hongkaiwang365\parquet\exception\NotSupportedException;
 
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\SchemaElement;
 
 class DataTypeFactory
 {

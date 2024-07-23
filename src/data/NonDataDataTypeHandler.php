@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
 {
@@ -15,8 +15,8 @@ abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
    * @inheritDoc
    */
   public function read(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -27,8 +27,8 @@ abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
    * @inheritDoc
    */
   public function readObject(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     throw new \LogicException('Not implemented'); // TODO
@@ -76,10 +76,10 @@ abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
    * @inheritDoc
    */
   public function write(
-    \hongkai\parquet\format\SchemaElement $tse,
-    \hongkai\parquet\adapter\BinaryWriter $writer,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryWriter $writer,
     array $values,
-    \hongkai\parquet\data\DataColumnStatistics $statistics = null
+    \hongkaiwang365\parquet\data\DataColumnStatistics $statistics = null
   ): void {
     throw new \LogicException('Not implemented'); // TODO
   }
@@ -87,7 +87,7 @@ abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
   /**
    * @inheritDoc
    */
-  public function plainEncode(\hongkai\parquet\format\SchemaElement $tse, $x)
+  public function plainEncode(\hongkaiwang365\parquet\format\SchemaElement $tse, $x)
   {
     throw new \LogicException('Not implemented'); // TODO
   }
@@ -96,7 +96,7 @@ abstract class NonDataDataTypeHandler implements DataTypeHandlerInterface
    * @inheritDoc
    */
   public function plainDecode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $encoded
   ) {
     throw new \LogicException('Not implemented'); // TODO

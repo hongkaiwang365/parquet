@@ -1,12 +1,12 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\BasicDataTypeHandler;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\BasicDataTypeHandler;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
 {
@@ -22,8 +22,8 @@ class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   protected function readSingle(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) : bool {
     return $reader->readBytes(1) !== null; // ??
@@ -37,8 +37,8 @@ class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function read(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -69,10 +69,10 @@ class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function Write(
-    \hongkai\parquet\format\SchemaElement $tse,
-    \hongkai\parquet\adapter\BinaryWriter $writer,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryWriter $writer,
     array $values,
-    \hongkai\parquet\data\DataColumnStatistics $statistics = null
+    \hongkaiwang365\parquet\data\DataColumnStatistics $statistics = null
   ): void {
     $n = 0;
     $b = 0; // byte
@@ -103,7 +103,7 @@ class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
   /**
    * @inheritDoc
    */
-  public function plainEncode(\hongkai\parquet\format\SchemaElement $tse, $x)
+  public function plainEncode(\hongkaiwang365\parquet\format\SchemaElement $tse, $x)
   {
     return null;
   }
@@ -112,7 +112,7 @@ class BooleanDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function plainDecode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $encoded
   ) {
     return null;

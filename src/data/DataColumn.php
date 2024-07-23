@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 /**
  * [DataColumn description]

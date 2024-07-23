@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
 /**
  * Interface

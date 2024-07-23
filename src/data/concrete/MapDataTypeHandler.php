@@ -1,15 +1,15 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
 use Exception;
 
-use hongkai\parquet\data\Field;
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\MapField;
-use hongkai\parquet\data\SchemaType;
-use hongkai\parquet\data\NonDataDataTypeHandler;
+use hongkaiwang365\parquet\data\Field;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\MapField;
+use hongkaiwang365\parquet\data\SchemaType;
+use hongkaiwang365\parquet\data\NonDataDataTypeHandler;
 
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 class MapDataTypeHandler extends NonDataDataTypeHandler
 {
@@ -17,8 +17,8 @@ class MapDataTypeHandler extends NonDataDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
     return isset($tse->converted_type) && ($tse->converted_type === ConvertedType::MAP || $tse->converted_type === ConvertedType::MAP_KEY_VALUE);
   }
@@ -64,8 +64,8 @@ class MapDataTypeHandler extends NonDataDataTypeHandler
    * @inheritDoc
    */
   public function createThrift(
-    \hongkai\parquet\data\Field $field,
-    \hongkai\parquet\format\SchemaElement $parent,
+    \hongkaiwang365\parquet\data\Field $field,
+    \hongkaiwang365\parquet\format\SchemaElement $parent,
     array &$container
   ): void {
     throw new \LogicException('Not implemented'); // TODO

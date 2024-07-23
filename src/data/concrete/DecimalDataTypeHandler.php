@@ -1,22 +1,22 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
 use Exception;
 
-use hongkai\parquet\ParquetException;
+use hongkaiwang365\parquet\ParquetException;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\DecimalDataField;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\DecimalDataField;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\SchemaElement;
 
-use hongkai\parquet\values\primitives\BigDecimal;
+use hongkaiwang365\parquet\values\primitives\BigDecimal;
 
 class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
 {
@@ -32,8 +32,8 @@ class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
 
     return
@@ -49,8 +49,8 @@ class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function createThrift(
-    \hongkai\parquet\data\Field $field,
-    \hongkai\parquet\format\SchemaElement $parent,
+    \hongkaiwang365\parquet\data\Field $field,
+    \hongkaiwang365\parquet\format\SchemaElement $parent,
     array &$container
   ): void {
     parent::createThrift($field, $parent, $container);
@@ -94,7 +94,7 @@ class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   public function read(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -267,7 +267,7 @@ class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   protected function readSingle(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     switch ($tse->type)
@@ -298,10 +298,10 @@ class DecimalDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function Write(
-    \hongkai\parquet\format\SchemaElement $tse,
-    \hongkai\parquet\adapter\BinaryWriter $writer,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryWriter $writer,
     array $values,
-    \hongkai\parquet\data\DataColumnStatistics $statistics = null
+    \hongkaiwang365\parquet\data\DataColumnStatistics $statistics = null
   ): void {
     switch($tse->type)
     {

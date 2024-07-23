@@ -1,18 +1,18 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
 use Exception;
 
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\DataColumn;
-use hongkai\parquet\data\DataTypeFactory;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\DataTypeFactory;
 
-use hongkai\parquet\file\ThriftFooter;
-use hongkai\parquet\file\ThriftStream;
-use hongkai\parquet\file\DataColumnWriter;
+use hongkaiwang365\parquet\file\ThriftFooter;
+use hongkaiwang365\parquet\file\ThriftStream;
+use hongkaiwang365\parquet\file\DataColumnWriter;
 
-use hongkai\parquet\format\RowGroup;
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\RowGroup;
+use hongkaiwang365\parquet\format\SchemaElement;
 
 class ParquetRowGroupWriter
 {

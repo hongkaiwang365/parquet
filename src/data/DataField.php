@@ -1,7 +1,7 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
-use hongkai\parquet\helper\OtherExtensions;
+use hongkaiwang365\parquet\helper\OtherExtensions;
 
 class DataField extends Field
 {
@@ -145,9 +145,9 @@ class DataField extends Field
           $hasNulls = false;
 
           // NOTE/TODO default fallback for DateTimeDataField ?
-          return \hongkai\parquet\data\DateTimeDataField::create(
+          return \hongkaiwang365\parquet\data\DateTimeDataField::create(
             $name,
-            \hongkai\parquet\data\DateTimeFormat::Impala,
+            \hongkaiwang365\parquet\data\DateTimeFormat::Impala,
             $hasNulls,
             $isArray ?? false
           );

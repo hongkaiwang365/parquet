@@ -1,16 +1,16 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
 use Exception;
 
-use hongkai\parquet\data\Field;
-use hongkai\parquet\data\SchemaType;
-use hongkai\parquet\data\StructField;
-use hongkai\parquet\data\DataTypeFactory;
-use hongkai\parquet\data\NonDataDataTypeHandler;
+use hongkaiwang365\parquet\data\Field;
+use hongkaiwang365\parquet\data\SchemaType;
+use hongkaiwang365\parquet\data\StructField;
+use hongkaiwang365\parquet\data\DataTypeFactory;
+use hongkaiwang365\parquet\data\NonDataDataTypeHandler;
 
-use hongkai\parquet\format\SchemaElement;
-use hongkai\parquet\format\FieldRepetitionType;
+use hongkaiwang365\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\FieldRepetitionType;
 
 class StructureDataTypeHandler extends NonDataDataTypeHandler
 {
@@ -18,8 +18,8 @@ class StructureDataTypeHandler extends NonDataDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
     return $tse->num_children > 0;
   }
@@ -51,8 +51,8 @@ class StructureDataTypeHandler extends NonDataDataTypeHandler
    * @inheritDoc
    */
   public function createThrift(
-    \hongkai\parquet\data\Field $field,
-    \hongkai\parquet\format\SchemaElement $parent,
+    \hongkaiwang365\parquet\data\Field $field,
+    \hongkaiwang365\parquet\format\SchemaElement $parent,
     array &$container
   ): void {
     $tseStruct = new SchemaElement([

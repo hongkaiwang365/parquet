@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\helper\OtherExtensions;
+use hongkaiwang365\parquet\helper\OtherExtensions;
 
 class ListField extends Field
 {
@@ -78,7 +78,7 @@ class ListField extends Field
   /**
    * @inheritDoc
    */
-  public function assign(\hongkai\parquet\data\Field $field): void
+  public function assign(\hongkaiwang365\parquet\data\Field $field): void
   {
     if($this->item !== null) {
       throw new Exception("item was already assigned to this list ({$this->name}), something is terribly wrong because a list can only have one item.");

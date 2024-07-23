@@ -1,17 +1,17 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
-use hongkai\parquet\data\DataField;
-use hongkai\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\DataField;
+use hongkaiwang365\parquet\data\DataColumn;
 
-use hongkai\parquet\file\ThriftFooter;
-use hongkai\parquet\file\ThriftStream;
-use hongkai\parquet\file\DataColumnReader;
+use hongkaiwang365\parquet\file\ThriftFooter;
+use hongkaiwang365\parquet\file\ThriftStream;
+use hongkaiwang365\parquet\file\DataColumnReader;
 
-use hongkai\parquet\format\RowGroup;
-use hongkai\parquet\format\ColumnChunk;
+use hongkaiwang365\parquet\format\RowGroup;
+use hongkaiwang365\parquet\format\ColumnChunk;
 
-use hongkai\parquet\helper\ThriftExtensions;
+use hongkaiwang365\parquet\helper\ThriftExtensions;
 
 /**
  * [ParquetRowGroupReader description]

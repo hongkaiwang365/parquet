@@ -1,14 +1,14 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
-use hongkai\parquet\format\Statistics;
-use hongkai\parquet\format\SchemaElement;
-use hongkai\parquet\format\FieldRepetitionType;
+use hongkaiwang365\parquet\format\Statistics;
+use hongkaiwang365\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\FieldRepetitionType;
 
 abstract class BasicDataTypeHandler implements DataTypeHandlerInterface
 {
@@ -121,15 +121,15 @@ abstract class BasicDataTypeHandler implements DataTypeHandlerInterface
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
     // NOTE: php evaluates a zero (0) to false, therefore we have to check for !== null instead of being truthy, somehow. (type == 0 => boolean)
     return ($tse->type !== null && $this->thriftType === $tse->type) &&
       ($this->convertedType === null || $tse->converted_type && $tse->converted_type === $this->convertedType);
   }
   //
-  // public function read(\hongkai\parquet\file\ThriftStream $stream) {
+  // public function read(\hongkaiwang365\parquet\file\ThriftStream $stream) {
   //   $stream->Read()
   // }
 
@@ -146,7 +146,7 @@ abstract class BasicDataTypeHandler implements DataTypeHandlerInterface
    */
   public function read(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -158,7 +158,7 @@ abstract class BasicDataTypeHandler implements DataTypeHandlerInterface
    */
   public function readObject(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     return $this->readSingle($reader, $tse, $length);

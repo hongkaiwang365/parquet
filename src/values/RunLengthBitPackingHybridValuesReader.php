@@ -1,7 +1,7 @@
 <?php
-namespace hongkai\parquet\values;
+namespace hongkaiwang365\parquet\values;
 
-use hongkai\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryReader;
 
 class RunLengthBitPackingHybridValuesReader
 {

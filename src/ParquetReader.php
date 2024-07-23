@@ -1,14 +1,14 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
 use Exception;
 
-use hongkai\parquet\data\Schema;
-use hongkai\parquet\data\DataColumn;
+use hongkaiwang365\parquet\data\Schema;
+use hongkaiwang365\parquet\data\DataColumn;
 
-use hongkai\parquet\file\ThriftFooter;
+use hongkaiwang365\parquet\file\ThriftFooter;
 
-use hongkai\parquet\format\FileMetaData;
+use hongkaiwang365\parquet\format\FileMetaData;
 
 /**
  * Parquet file format reader implementation

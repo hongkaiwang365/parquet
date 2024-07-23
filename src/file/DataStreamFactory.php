@@ -1,14 +1,14 @@
 <?php
-namespace hongkai\parquet\file;
+namespace hongkaiwang365\parquet\file;
 
 use Exception;
 
-use hongkai\parquet\GapStreamWrapper;
-use hongkai\parquet\CompressionMethod;
-use hongkai\parquet\GzipStreamWrapper;
-use hongkai\parquet\SnappyInMemoryStreamWrapper;
+use hongkaiwang365\parquet\GapStreamWrapper;
+use hongkaiwang365\parquet\CompressionMethod;
+use hongkaiwang365\parquet\GzipStreamWrapper;
+use hongkaiwang365\parquet\SnappyInMemoryStreamWrapper;
 
-use hongkai\parquet\format\CompressionCodec;
+use hongkaiwang365\parquet\format\CompressionCodec;
 
 class DataStreamFactory
 {

@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\helper\OtherExtensions;
+use hongkaiwang365\parquet\helper\OtherExtensions;
 
 class MapField extends Field
 {
@@ -79,7 +79,7 @@ class MapField extends Field
   /**
    * @inheritDoc
    */
-  public function assign(\hongkai\parquet\data\Field $field): void
+  public function assign(\hongkaiwang365\parquet\data\Field $field): void
   {
     if($this->key === null) {
       $this->key = $field;

@@ -1,16 +1,16 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
 use DateTime;
 use DateTimeImmutable;
 
-use hongkai\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryReader;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 /**
  * [DateTimeOffsetDataTypeHandler description]
@@ -32,8 +32,8 @@ class DateTimeDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
     return
       ($tse->type === Type::INT96 && $formatOptions->TreatBigIntegersAsDates) || // Impala
@@ -46,7 +46,7 @@ class DateTimeDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   public function read(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -60,7 +60,7 @@ class DateTimeDataTypeHandler extends BasicPrimitiveDataTypeHandler
    */
   protected function readSingle(
     BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     throw new \LogicException('this stub should never be called');

@@ -1,9 +1,9 @@
 <?php
 
-use hongkai\parquet\ParquetOptions;
-use hongkai\parquet\ParquetReader;
-use hongkai\parquet\ParquetWriter;
-use hongkai\parquet\CompressionMethod;
+use hongkaiwang365\parquet\ParquetOptions;
+use hongkaiwang365\parquet\ParquetReader;
+use hongkaiwang365\parquet\ParquetWriter;
+use hongkaiwang365\parquet\CompressionMethod;
 
 require_once('vendor/autoload.php');
 ini_set('memory_limit', '4G');

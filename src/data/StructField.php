@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\helper\OtherExtensions;
+use hongkaiwang365\parquet\helper\OtherExtensions;
 
 class StructField extends Field
 {
@@ -80,7 +80,7 @@ class StructField extends Field
   /**
    * @inheritDoc
    */
-  public function assign(\hongkai\parquet\data\Field $field): void
+  public function assign(\hongkaiwang365\parquet\data\Field $field): void
   {
     $this->fields[] = $field;
   }

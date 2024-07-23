@@ -1,9 +1,9 @@
 <?php
-namespace hongkai\parquet\data;
+namespace hongkaiwang365\parquet\data;
 
 use Exception;
 
-use hongkai\parquet\format\SchemaElement;
+use hongkaiwang365\parquet\format\SchemaElement;
 
 /**
  * [abstract description]

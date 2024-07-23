@@ -1,14 +1,14 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
-use hongkai\parquet\adapter\BinaryReader;
-use hongkai\parquet\adapter\BinaryWriter;
+use hongkaiwang365\parquet\adapter\BinaryReader;
+use hongkaiwang365\parquet\adapter\BinaryWriter;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\BasicDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\BasicDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 class StringDataTypeHandler extends BasicDataTypeHandler
 {
@@ -24,8 +24,8 @@ class StringDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   public function isMatch(
-    \hongkai\parquet\format\SchemaElement $tse,
-    ?\hongkai\parquet\ParquetOptions $formatOptions
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
+    ?\hongkaiwang365\parquet\ParquetOptions $formatOptions
   ): bool {
 
     return $tse->type && $tse->type === Type::BYTE_ARRAY &&
@@ -39,8 +39,8 @@ class StringDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   protected function readSingle(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     $this->readSingleInternal($reader, $tse, $length, true);
@@ -48,15 +48,15 @@ class StringDataTypeHandler extends BasicDataTypeHandler
 
   /**
    * [readSingleInternal description]
-   * @param  \hongkai\parquet\adapter\BinaryReader $reader          [description]
-   * @param  \hongkai\parquet\format\SchemaElement $tse             [description]
+   * @param  \hongkaiwang365\parquet\adapter\BinaryReader $reader          [description]
+   * @param  \hongkaiwang365\parquet\format\SchemaElement $tse             [description]
    * @param  int                                  $length          [description]
    * @param  bool                                 $hasLengthPrefix [description]
    * @return [type]                                            [description]
    */
   protected function readSingleInternal(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length,
     bool $hasLengthPrefix
   ) {
@@ -76,8 +76,8 @@ class StringDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   public function read(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     array &$dest,
     int $offset
   ): int {
@@ -124,7 +124,7 @@ class StringDataTypeHandler extends BasicDataTypeHandler
   /**
   * @inheritDoc
    */
-  protected function WriteOne(\hongkai\parquet\adapter\BinaryWriter $writer, $value): void
+  protected function WriteOne(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, $value): void
   {
     $this->writeOneInternal($writer, $value, true);
   }
@@ -134,11 +134,11 @@ class StringDataTypeHandler extends BasicDataTypeHandler
    */
   /**
    * [WriteOneInternal description]
-   * @param \hongkai\parquet\adapter\BinaryWriter $writer [description]
+   * @param \hongkaiwang365\parquet\adapter\BinaryWriter $writer [description]
    * @param string                               $value  [description]
    * @param bool                                 $includeLengthPrefix
    */
-  protected function WriteOneInternal(\hongkai\parquet\adapter\BinaryWriter $writer, $value, bool $includeLengthPrefix): void
+  protected function WriteOneInternal(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, $value, bool $includeLengthPrefix): void
   {
     $valueLength = null;
     if ($value === null || ($valueLength = \strlen($value)) === 0)
@@ -171,7 +171,7 @@ class StringDataTypeHandler extends BasicDataTypeHandler
   /**
    * @inheritDoc
    */
-  public function plainEncode(\hongkai\parquet\format\SchemaElement $tse, $x)
+  public function plainEncode(\hongkaiwang365\parquet\format\SchemaElement $tse, $x)
   {
     if($x === null) return null;
 
@@ -185,7 +185,7 @@ class StringDataTypeHandler extends BasicDataTypeHandler
    * @inheritDoc
    */
   public function plainDecode(
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     $encoded
   ) {
     if ($encoded === null) return null;

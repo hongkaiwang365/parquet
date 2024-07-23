@@ -1,11 +1,11 @@
 <?php
-namespace hongkai\parquet\data\concrete;
+namespace hongkaiwang365\parquet\data\concrete;
 
-use hongkai\parquet\data\DataType;
-use hongkai\parquet\data\BasicPrimitiveDataTypeHandler;
+use hongkaiwang365\parquet\data\DataType;
+use hongkaiwang365\parquet\data\BasicPrimitiveDataTypeHandler;
 
-use hongkai\parquet\format\Type;
-use hongkai\parquet\format\ConvertedType;
+use hongkaiwang365\parquet\format\Type;
+use hongkaiwang365\parquet\format\ConvertedType;
 
 class ByteDataTypeHandler extends BasicPrimitiveDataTypeHandler
 {
@@ -21,8 +21,8 @@ class ByteDataTypeHandler extends BasicPrimitiveDataTypeHandler
    * @inheritDoc
    */
   protected function readSingle(
-    \hongkai\parquet\adapter\BinaryReader $reader,
-    \hongkai\parquet\format\SchemaElement $tse,
+    \hongkaiwang365\parquet\adapter\BinaryReader $reader,
+    \hongkaiwang365\parquet\format\SchemaElement $tse,
     int $length
   ) {
     // We're always reading INT32, see Thrift Type
@@ -33,7 +33,7 @@ class ByteDataTypeHandler extends BasicPrimitiveDataTypeHandler
   /**
    * @inheritDoc
    */
-  protected function WriteOne(\hongkai\parquet\adapter\BinaryWriter $writer, $value): void
+  protected function WriteOne(\hongkaiwang365\parquet\adapter\BinaryWriter $writer, $value): void
   {
     // We're always writing INT32, see Thrift Type
     $writer->writeInt32($value);

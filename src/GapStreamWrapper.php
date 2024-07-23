@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet;
+namespace hongkaiwang365\parquet;
 
 use Exception;
 
@@ -330,7 +330,7 @@ class GapStreamWrapper implements StreamWrapperInterface, MarkWriteFinishedInter
   {
     // echo("stream close of gap stream!".chr(10));
 
-    // print_r(\hongkai\parquet\GapStreamWrapper::$staticParents);
+    // print_r(\hongkaiwang365\parquet\GapStreamWrapper::$staticParents);
     //
     // $trace = debug_backtrace();
     // foreach($trace as $te) {

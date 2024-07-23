@@ -1,5 +1,5 @@
 <?php
-namespace hongkai\parquet\adapter;
+namespace hongkaiwang365\parquet\adapter;
 
 /**
  * Adapter for mdurrant's PhpBinaryReader

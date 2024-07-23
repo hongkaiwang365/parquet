@@ -1,10 +1,10 @@
 <?php
-namespace hongkai\parquet\helper;
+namespace hongkaiwang365\parquet\helper;
 
 use DateTimeImmutable;
 use DateTimeInterface;
 
-use hongkai\parquet\data\Schema;
+use hongkaiwang365\parquet\data\Schema;
 
 class OtherExtensions
 {
